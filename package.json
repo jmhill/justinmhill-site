@@ -1,0 +1,20 @@
+{
+  "name": "justinmhill-site",
+  "version": "0.0.0",
+  "description": "Personal website of Justin Hill",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmhill/justinmhill-site.git"
+  },
+  "author": "Justin M Hill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmhill/justinmhill-site/issues"
+  },
+  "homepage": "https://github.com/jmhill/justinmhill-site#readme"
+}
