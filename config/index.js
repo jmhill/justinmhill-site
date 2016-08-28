@@ -8,5 +8,8 @@ module.exports = {
 
   // function containing all set-up information for
   // creating an express application on the server
-  express: require('./express')
+  express: require('./express'),
+
+  // function containing mongoose set-up
+  mongoose: require('./mongoose')
 }

@@ -2,6 +2,7 @@
 
 const config = require('./config');
 
+const db = config.mongoose();
 const app = config.express();
 
 app.listen(config.environment.PORT, function() {
