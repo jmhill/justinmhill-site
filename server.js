@@ -1,9 +1,9 @@
 'use strict';
 
-const PORT = process.env.PORT || 8080;
+const config = require('./config');
 
 const express = require('express');
 
-const app = express();
-
-app.listen(PORT);
+app.listen(config.environment.PORT, function() {
+  console.log("app listening on port: " + config.environment.PORT);
+});
