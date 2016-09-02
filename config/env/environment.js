@@ -6,9 +6,9 @@ const env = process.env.NODE_ENV;
 // correct configuration file.
 exports.getConfigurationObject = function() {
   if (env) {
-    const configFilePath = "./" + env + ".js";
+    const configFilePath = "./config_objects/" + env + ".js";
     return require(configFilePath);
   } else {
-    throw new Error("NODE_ENV has not been set");
+    throw new Error("NODE_ENV has not been set.");
   }
 }
