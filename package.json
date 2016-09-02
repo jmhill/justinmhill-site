@@ -4,7 +4,7 @@
   "description": "Personal website of Justin Hill",
   "main": "server.js",
   "scripts": {
-    "test": "NODE_ENV=test tape **/*.spec.js",
+    "test": "NODE_ENV=test tape */**/*.spec.js | faucet",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "NODE_ENV=development nodemon server.js"
   },
@@ -24,6 +24,7 @@
     "mongoose": "^4.5.10"
   },
   "devDependencies": {
+    "faucet": "0.0.1",
     "nodemon": "^1.10.2",
     "tape": "^4.6.0"
   }
