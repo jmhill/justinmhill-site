@@ -4,7 +4,7 @@
   "description": "Personal website of Justin Hill",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test tape **/*.spec.js",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "NODE_ENV=development nodemon server.js"
   },
@@ -24,6 +24,7 @@
     "mongoose": "^4.5.10"
   },
   "devDependencies": {
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "tape": "^4.6.0"
   }
 }
