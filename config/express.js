@@ -9,6 +9,9 @@ module.exports = function() {
     extended: true
   }));
 
+  app.set('views', './views');
+  app.set('view engine', 'ejs');
+
   // Route registration:
   // Application routers are configured within
   // a setRoutes function in app/app.js, and this
