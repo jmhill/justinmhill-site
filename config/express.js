@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const setRoutes = require('../app').setRoutes;
+const api = require('../api');
 
 module.exports = function() {
   const app = express();
@@ -11,8 +11,6 @@ module.exports = function() {
 
   app.use(express.static('public'));
 
-  app.set('view engine', 'ejs');
-
   // Route registration:
   // Application routers are configured within
   // a setRoutes function in app/app.js, and this
@@ -20,7 +18,7 @@ module.exports = function() {
   // setRoutes function takes the express app
   // as a parameter and adds all routers.
 
-  setRoutes(app);
+  api.setRoutes(app);
 
   // error handlers
 
