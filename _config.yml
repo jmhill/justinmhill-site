@@ -1,0 +1,39 @@
+# This file for reference only - copied over from old github.io site
+# Site owner settings
+title: Justin Hill
+email: justinmhill@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A blog and portfolio site focusing on
+  technology, web development, and education.
+twitter_username: justinmhill
+github_username:  jmhill
+
+# Site structure
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://justinmhill.com" # the base hostname & protocol for your site
+permalink: /blog/:year/:month/:day/:title/ # the url structure for posts
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  -
+    scope:
+      type: "projects"
+    values:
+      layout: "project"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Build settings
+markdown: kramdown
+
+# Use jekyll-feed plugin
+gems:
+  - jekyll-feed
