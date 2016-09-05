@@ -6,7 +6,9 @@
   "scripts": {
     "test": "NODE_ENV=test tape */**/*.spec.js | faucet",
     "start": "NODE_ENV=production node server.js",
-    "dev": "NODE_ENV=development nodemon server.js"
+    "predev": "npm run build-dev",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "build-dev": "node scripts/build-dev.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +28,13 @@
     "react-dom": "^15.3.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
     "faucet": "0.0.1",
     "nodemon": "^1.10.2",
-    "tape": "^4.6.0"
+    "tape": "^4.6.0",
+    "watchify": "^3.7.0"
   }
 }
