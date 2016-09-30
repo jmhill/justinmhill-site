@@ -6,8 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test tape */**/*.spec.js | faucet",
     "start": "NODE_ENV=production node server.js",
-    "predev": "npm run build-dev",
-    "dev": "NODE_ENV=development nodemon server.js",
+    "dev": "npm run build-dev & NODE_ENV=development nodemon --ignore public --ignore src server.js",
     "build-dev": "node scripts/build-dev.js"
   },
   "repository": {
