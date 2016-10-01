@@ -14,5 +14,5 @@ class Test extends React.Component {
 
 ReactDOM.render(
   <Test />,
-  document.getElementById("react-app")
+  document.getElementById("root")
 );

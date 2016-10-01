@@ -20808,6 +20808,6 @@ var Test = function (_React$Component) {
   return Test;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(Test, null), document.getElementById("react-app"));
+_reactDom2.default.render(_react2.default.createElement(Test, null), document.getElementById("root"));
 
 },{"react":171,"react-dom":2}]},{},[172]);
