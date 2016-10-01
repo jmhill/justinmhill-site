@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
+import MainLayout from './components/MainLayout';
 
-// Testing
-class Test extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>Hello React!</p>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(
-  <Test />,
-  document.getElementById("root")
-);
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={MainLayout}>
+    </Route>
+  </Router>
+), document.getElementById("root"));
