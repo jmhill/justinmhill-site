@@ -12,6 +12,7 @@
 const fs = require('fs');
 const browserify = require('browserify');
 const watchify = require('watchify');
+const errorify = require('errorify');
 
 function runBundler() {
   b.transform("babelify", {
@@ -25,7 +26,7 @@ const b = browserify({
   entries: ["./src/client/main.js"],
   cache: {},
   packageCache: {},
-  plugin: [watchify]
+  plugin: [watchify, errorify]
 });
 
 b.on('update', function(ids) {
