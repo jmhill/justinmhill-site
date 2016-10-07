@@ -1,0 +1,3 @@
+# Ignore generated files (e.g., browserify bundle)
+
+app.js
