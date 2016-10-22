@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
-import MainLayout from './components/MainLayout.js';
-import Home from './components/Home.js';
-import About from './components/About.js';
-import Blog from './components/Blog.js';
-import Contact from './components/Contact.js';
-import Projects from './components/Projects.js';
+
+import MainLayout from './layouts/MainLayout.js';
+
+import Home from './pages/Home.js';
+import About from './pages/About.js';
+import Blog from './pages/Blog.js';
+import Contact from './pages/Contact.js';
+import Projects from './pages/Projects.js';
 
 ReactDOM.render((
   <Router history={browserHistory}>
