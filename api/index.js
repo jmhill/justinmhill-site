@@ -1,5 +1,5 @@
-const app = require('./routes.js');
+const routes = require('./routes.js');
 
 module.exports = {
-  setRoutes: app.setRoutes
+  setRoutes: routes.setRoutes
 }
