@@ -1,6 +1,10 @@
-const home = require('./home');
+const routeModules = [
+  require('./home')
+];
 
 exports.setRoutes = function(app) {
-  home(app);
+  routeModules.forEach(function(route) {
+    route(app);
+  });
 };
 
