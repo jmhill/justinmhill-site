@@ -18,3 +18,10 @@ export default class PostSummary extends React.Component {
     );
   }
 }
+
+PostSummary.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  url: React.PropTypes.string.isRequired,
+  date: React.PropTypes.string.isRequired,
+  summary: React.PropTypes.string.isRequired,
+}
