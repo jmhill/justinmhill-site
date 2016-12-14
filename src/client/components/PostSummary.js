@@ -7,12 +7,12 @@ export default class PostSummary extends React.Component {
     return (
       <section className="post">
         <h2 className="post-title">
-          <a href="{props.url}">{props.title}</a>
+          <a href={props.url}>{props.title}</a>
         </h2>
         <p className="post-meta">{props.date}</p>
         <div className="post-description">
           {props.summary}
-          <a href="{props.url}"> Read more...</a>
+          <a href={props.url}> Read more...</a>
         </div>
       </section>
     );
