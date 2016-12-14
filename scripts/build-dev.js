@@ -15,11 +15,7 @@ const watchify = require('watchify');
 const errorify = require('errorify');
 
 function runBundler() {
-  b.transform("babelify", {
-      presets: ["es2015", "react"]
-    })
-    .bundle()
-    .pipe(fs.createWriteStream("./public/js/app.js"));
+  b.bundle().pipe(fs.createWriteStream("./public/js/app.js"));
 }
 
 const b = browserify({
@@ -27,6 +23,8 @@ const b = browserify({
   cache: {},
   packageCache: {},
   plugin: [watchify, errorify]
+}).transform("babelify", {
+  presets: ["es2015", "react"]
 });
 
 b.on('update', function(ids) {
