@@ -4,7 +4,7 @@ const Post = mongoose.model('Post');
 exports.getPosts = (request, response) => {
   let posts = Post.find({}, function (err, posts) {
     if (err) next(err);
-    response.json(posts);
+    response.json({ posts: posts });
   });
   return posts;
 };
