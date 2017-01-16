@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 // Configuration module provides all of the set-up necessary for
