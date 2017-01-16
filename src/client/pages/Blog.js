@@ -1,5 +1,6 @@
 import React from 'react';
 import PostSummary from '../components/PostSummary.js';
+import ContentBlock from '../components/ContentBlock.js';
 import axios from 'axios';
 
 
@@ -27,14 +28,17 @@ export default class Blog extends React.Component {
     let posts = this.state.posts;
     return (
       <div>
+        <ContentBlock
+          headerText="Blog"
+        />
         {posts.map( post => {
           return (
             <PostSummary 
               title={post.title}
               url={post.url}
-              date={post.date}
+              date={post.datePublished}
               summary={post.summary}
-              key={post.id}
+              key={post._id}
             />
           );
         })}
