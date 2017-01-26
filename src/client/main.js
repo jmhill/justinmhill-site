@@ -9,6 +9,7 @@ import About from './pages/About.js';
 import Blog from './pages/Blog.js';
 import Contact from './pages/Contact.js';
 import Projects from './pages/Projects.js';
+import NotFound from './pages/NotFound.js';
 
 ReactDOM.render((
   <Router history={browserHistory}>
@@ -18,6 +19,7 @@ ReactDOM.render((
       <Route path="blog" component={Blog} />
       <Route path="contact" component={Contact} />
       <Route path="projects" component={Projects} />
+      <Route path="*" component={NotFound} />
     </Route>
   </Router>
 ), document.getElementById("root"));
