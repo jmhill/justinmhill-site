@@ -6,6 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test tape */**/*.spec.js",
     "start": "NODE_ENV=production node server.js",
+    "build": "browserify ./src/client/main.js -t babelify --outfile ./public/js/app.js",
     "dev": "npm-run-all -p dev:*",
     "dev:server": "NODE_ENV=development nodemon --ignore public --ignore src server.js",
     "dev:build": "node scripts/build-dev.js"
