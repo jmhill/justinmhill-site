@@ -1,5 +1,5 @@
 import React from 'react';
-import PostSummary from '../components/PostSummary.js';
+import PostSummaryList from '../components/PostSummaryList.js';
 import ContentBlock from '../components/ContentBlock.js';
 import axios from 'axios';
 
