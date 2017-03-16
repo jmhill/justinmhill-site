@@ -8,6 +8,8 @@ exports.init = function() {
     extended: true
   }));
 
+  app.use(bodyParser.json());
+
   app.use(express.static('public'));
 
   // error handlers
