@@ -15,5 +15,8 @@ const routes = require('./api');
 routes.setRoutes(app);
 
 app.listen(config.environment.PORT, function() {
-  console.log("app listening on port: " + config.environment.PORT);
+  let datetime = new Date();
+  let date = datetime.toLocaleDateString();
+  let time = datetime.toLocaleTimeString();
+  console.log(`${date} ${time} - app started and listening on port: ${config.environment.PORT}`);
 });
