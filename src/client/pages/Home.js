@@ -25,13 +25,14 @@ export default class Home extends React.Component {
   
   render() {
     let posts = this.state.posts;
+    let content = {
+      title: "Testing",
+      body: "This is just a test"
+    };
 
     return (
       <div>
-        <ContentBlock
-          headerText="Testing"
-          bodyText="This is just a test"
-        />
+        <ContentBlock content={content} />
         <h2 className="content-subhead">Recent Posts</h2>
         <PostSummaryList posts={posts} />
       </div>

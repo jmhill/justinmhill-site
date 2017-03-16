@@ -31,5 +31,10 @@ export default class PostSummary extends React.Component {
 }
 
 PostSummary.propTypes = {
-  post: React.PropTypes.object
+  post: React.PropTypes.shape({
+    title: React.PropTypes.string.isRequired,
+    url: React.PropTypes.string.isRequired,
+    datePublished: React.PropTypes.string,
+    summary: React.PropTypes.string
+  })
 }

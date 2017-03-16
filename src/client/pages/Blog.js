@@ -26,9 +26,13 @@ export default class Blog extends React.Component {
   
   render() {
     let posts = this.state.posts;
+    let content = {
+      title: "Blog"
+    };
+
     return (
       <div>
-        <ContentBlock headerText="Blog" />
+        <ContentBlock content={content} />
         <PostSummaryList posts={posts} />
       </div>
     );
