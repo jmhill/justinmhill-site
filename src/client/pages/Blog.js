@@ -28,20 +28,8 @@ export default class Blog extends React.Component {
     let posts = this.state.posts;
     return (
       <div>
-        <ContentBlock
-          headerText="Blog"
-        />
-        {posts.map( post => {
-          return (
-            <PostSummary 
-              title={post.title}
-              url={post.url}
-              date={post.datePublished}
-              summary={post.summary}
-              key={post._id}
-            />
-          );
-        })}
+        <ContentBlock headerText="Blog" />
+        <PostSummaryList posts={posts} />
       </div>
     );
   }

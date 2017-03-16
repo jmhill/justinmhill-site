@@ -7,17 +7,17 @@ export default class PostSummary extends React.Component {
   }
   
   render() {
-    var props = this.props;
+    var post = this.props.post;
     
     return (
       <section className="post">
         <h2 className="post-title">
-          <a href={props.url}>{props.title}</a>
+          <a href={post.url}>{post.title}</a>
         </h2>
-        <p className="post-meta">{this.formatDate(props.date)}</p>
+        <p className="post-meta">{this.formatDate(post.datePublished)}</p>
         <div className="post-description">
-          {props.summary}
-          <a href={props.url}> Read more...</a>
+          {post.summary}
+          <a href={post.url}> Read more...</a>
         </div>
       </section>
     );
@@ -31,8 +31,5 @@ export default class PostSummary extends React.Component {
 }
 
 PostSummary.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string.isRequired,
-  date: React.PropTypes.string.isRequired,
-  summary: React.PropTypes.string.isRequired,
+  post: React.PropTypes.object
 }

@@ -1,9 +1,31 @@
 import React from 'react';
 import ContentBlock from '../components/ContentBlock.js';
-import PostSummary from '../components/PostSummary.js';
+import PostSummaryList from '../components/PostSummaryList.js';
+import axios from 'axios';
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get('/posts')
+      .then( response => {
+        this.setState({
+          posts: response.data.posts
+        });
+      })
+      .catch( error => {
+        console.log(error);
+      });
+  }
+  
   render() {
+    let posts = this.state.posts;
+
     return (
       <div>
         <ContentBlock
@@ -11,12 +33,7 @@ export default class Home extends React.Component {
           bodyText="This is just a test"
         />
         <h2 className="content-subhead">Recent Posts</h2>
-        <PostSummary
-          title="Test post"
-          url="http://google.com"
-          date="11/26/2016"
-          summary="This is just a test post for the Summary component"
-        />
+        <PostSummaryList posts={posts} />
       </div>
     );
   }
