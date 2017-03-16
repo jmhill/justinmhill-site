@@ -6,6 +6,7 @@ exports.init = function() {
 
   // register models here
   require('../api/posts/posts.model.js')();
+  require('../api/content/content.model.js')();
 
   console.log(mongoose.modelNames());
 
