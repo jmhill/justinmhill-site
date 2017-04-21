@@ -6,13 +6,15 @@ exports.getPosts = (request, response) => {
     if (err) next(err);
     response.json({ posts: posts });
   });
+  
   return posts;
 };
 
 exports.createPost = (request, response) => {
   let post = new Post(request.body);
+  
   return post.save((err, post) => {
-    if (err) next(err);
+    if (err) return next(err);
     response.json(post);
   });
 };

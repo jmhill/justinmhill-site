@@ -1,5 +1,5 @@
 import React from 'react';
-import PostSummary from '../components/PostSummary.js';
+import PostSummaryList from '../components/PostSummaryList.js';
 import ContentBlock from '../components/ContentBlock.js';
 import axios from 'axios';
 
@@ -13,7 +13,7 @@ export default class Blog extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/posts')
+    axios.get('/api/posts')
       .then( response => {
         this.setState({
           posts: response.data.posts
@@ -26,22 +26,14 @@ export default class Blog extends React.Component {
   
   render() {
     let posts = this.state.posts;
+    let content = {
+      title: "Blog"
+    };
+
     return (
       <div>
-        <ContentBlock
-          headerText="Blog"
-        />
-        {posts.map( post => {
-          return (
-            <PostSummary 
-              title={post.title}
-              url={post.url}
-              date={post.datePublished}
-              summary={post.summary}
-              key={post._id}
-            />
-          );
-        })}
+        <ContentBlock content={content} />
+        <PostSummaryList posts={posts} />
       </div>
     );
   }
