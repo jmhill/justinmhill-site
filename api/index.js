@@ -1,5 +1,3 @@
-const routes = require('./routes.js');
+const router = require('./router.js');
 
-module.exports = {
-  setRoutes: routes.setRoutes
-}
+module.exports = router;

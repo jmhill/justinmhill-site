@@ -12,7 +12,7 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/posts')
+    axios.get('/api/posts')
       .then( response => {
         this.setState({
           posts: response.data.posts

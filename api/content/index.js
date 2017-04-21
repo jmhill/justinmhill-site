@@ -1,10 +1,12 @@
 const content = require('./content.controller.js');
 
-module.exports = app => {
-  app.route('/content/:key')
+module.exports = router => {
+  router.route('/content/:key')
     .get(content.getContent);
   
-  app.route('/content')
+  router.route('/content')
     .get(content.getAllContent)
     .post(content.createContent);
+
+  return router;
 };
