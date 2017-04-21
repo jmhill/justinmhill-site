@@ -15,6 +15,12 @@ const api = require('./api');
 
 app.use('/api', api);
 
+// Catch all random route requests and just send the index again
+
+app.get('*', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html');
+});
+
 // error handlers
 
 // development error handler
