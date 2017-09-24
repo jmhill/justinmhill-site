@@ -31,7 +31,9 @@ test:
 # Job: deploy to production
 deploy:
   stage: deploy
-  script: scripts/deploy.sh
+  script:
+    - "chmod +x ./scripts/deploy.sh"
+    - "./scripts/deploy.sh"
   environment:
     name: production
   
